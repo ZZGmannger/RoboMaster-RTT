@@ -43,8 +43,6 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
-
-
 #define RT_CONSOLE_DEVICE_NAME "uart2"
 #define RT_VER_NUM 0x40101
 #define ARCH_ARM
@@ -208,6 +206,9 @@
 
 /* samples: kernel and components samples */
 
+#define PKG_USING_FILESYSTEM_SAMPLES
+#define PKG_USING_FILESYSTEM_SAMPLES_LATEST_VERSION
+#define FILESYSTEM_SAMPLES_USING_READWRITE
 
 /* entertainment: terminal games and other interesting software packages */
 

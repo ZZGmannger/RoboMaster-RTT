@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>__STDC_LIMIT_MACROS, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND, STM32F427xx, __RTTHREAD__, RT_USING_ARM_LIBC</Define>
               <Undefine></Undefine>
-              <IncludePath>applications;..\..\..\components\libc\compilers\common\include;..\..\..\components\libc\compilers\common\extension;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\libcpu\arm\common;..\..\..\libcpu\arm\cortex-m4;..\..\..\components\drivers\hwcrypto;.;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\drivers\include;board;board\CubeMX_Config\Inc;board\ports;..\libraries\HAL_Drivers;..\libraries\HAL_Drivers\config;..\libraries\HAL_Drivers\CMSIS\Include;..\..\..\components\dfs\include;..\..\..\components\dfs\filesystems\elmfat;..\..\..\components\finsh;.;..\..\..\include;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;..\..\..\components\libc\posix\io\poll;..\..\..\components\libc\posix\io\stdio;..\..\..\components\libc\posix\ipc</IncludePath>
+              <IncludePath>applications;..\..\..\components\libc\compilers\common\include;..\..\..\components\libc\compilers\common\extension;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\libcpu\arm\common;..\..\..\libcpu\arm\cortex-m4;..\..\..\components\drivers\hwcrypto;.;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\drivers\include;board;board\CubeMX_Config\Inc;board\ports;..\libraries\HAL_Drivers;..\libraries\HAL_Drivers\config;..\libraries\HAL_Drivers\CMSIS\Include;..\..\..\components\dfs\include;..\..\..\components\dfs\filesystems\elmfat;packages\filesystem_samples-latest;..\..\..\components\finsh;.;..\..\..\include;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;..\..\..\components\libc\posix\io\poll;..\..\..\components\libc\posix\io\stdio;..\..\..\components\libc\posix\ipc;..\..\..\components\legacy\dfs</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -636,6 +636,16 @@
               <FileName>dfs_posix.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\dfs\src\dfs_posix.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>filesystem-samples</GroupName>
+          <Files>
+            <File>
+              <FileName>readwrite_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\filesystem_samples-latest\readwrite_sample.c</FilePath>
             </File>
           </Files>
         </Group>
