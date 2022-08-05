@@ -98,6 +98,7 @@
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_PWM
 #define RT_USING_SDIO
 #define RT_SDIO_STACK_SIZE 512
 #define RT_SDIO_THREAD_PRIORITY 15
@@ -229,6 +230,9 @@
 #define BSP_USING_UART
 #define BSP_USING_UART2
 #define BSP_USING_SDIO
+#define BSP_USING_PWM
+#define BSP_USING_PWM12
+#define BSP_USING_PWM12_CH1
 
 /* Board extended module Drivers */
 
