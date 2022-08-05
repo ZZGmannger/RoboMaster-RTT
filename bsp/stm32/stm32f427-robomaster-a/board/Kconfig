@@ -22,6 +22,10 @@ menu "On-chip Peripheral Drivers"
         bool "Enable GPIO"
         select RT_USING_PIN
         default y
+		
+	config BSP_USING_SPI5
+		bool "Enable SPI5"
+		default n
 
     menuconfig BSP_USING_UART
         bool "Enable UART"
