@@ -40,6 +40,7 @@
 #define STOP_BITS_3                     2
 #define STOP_BITS_4                     3
 
+#undef _WIN32
 #ifdef _WIN32
 #include <windows.h>
 #else
