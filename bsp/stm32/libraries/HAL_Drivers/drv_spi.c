@@ -968,5 +968,14 @@ int rt_hw_spi_init(void)
 }
 INIT_BOARD_EXPORT(rt_hw_spi_init);
 
+static int rt_hw_spi_imu_init(void)
+{
+    __HAL_RCC_GPIOF_CLK_ENABLE();
+    rt_hw_spi_device_attach("spi5", "spi50", GPIOF, GPIO_PIN_6);
+
+    return RT_EOK;
+}
+INIT_COMPONENT_EXPORT(rt_hw_spi_imu_init);
+
 #endif /* BSP_USING_SPI1 || BSP_USING_SPI2 || BSP_USING_SPI3 || BSP_USING_SPI4 || BSP_USING_SPI5 */
 #endif /* RT_USING_SPI */

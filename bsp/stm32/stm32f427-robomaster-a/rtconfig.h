@@ -20,6 +20,7 @@
 
 /* kservice optimization */
 
+#define RT_KPRINTF_USING_LONGLONG
 #define RT_DEBUG
 #define RT_DEBUG_COLOR
 
@@ -43,7 +44,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
-#define RT_CONSOLE_DEVICE_NAME "uart2"
+#define RT_CONSOLE_DEVICE_NAME "uart6"
 #define RT_VER_NUM 0x40101
 #define ARCH_ARM
 #define RT_USING_CPU_FFS
@@ -56,6 +57,7 @@
 #define RT_USING_USER_MAIN
 #define RT_MAIN_THREAD_STACK_SIZE 2048
 #define RT_MAIN_THREAD_PRIORITY 10
+#define RT_USING_LEGACY
 #define RT_USING_MSH
 #define RT_USING_FINSH
 #define FINSH_USING_MSH
@@ -106,11 +108,14 @@
 #define RT_MMCSD_THREAD_PREORITY 22
 #define RT_MMCSD_MAX_PARTITION 16
 #define RT_USING_SPI
+#define RT_USING_SENSOR
+#define RT_USING_SENSOR_CMD
 #define RT_USING_HWCRYPTO
 #define RT_HWCRYPTO_DEFAULT_NAME "hwcryto"
 #define RT_HWCRYPTO_IV_MAX_SIZE 16
 #define RT_HWCRYPTO_KEYBIT_MAX_SIZE 256
 #define RT_HWCRYPTO_USING_RNG
+#define RT_USING_PULSE_ENCODER
 
 /* Using USB */
 
@@ -134,6 +139,20 @@
 
 /* Utilities */
 
+#define RT_USING_ULOG
+#define ULOG_OUTPUT_LVL_D
+#define ULOG_OUTPUT_LVL 7
+#define ULOG_ASSERT_ENABLE
+#define ULOG_LINE_BUF_SIZE 128
+
+/* log format */
+
+#define ULOG_OUTPUT_FLOAT
+#define ULOG_USING_COLOR
+#define ULOG_OUTPUT_TIME
+#define ULOG_OUTPUT_LEVEL
+#define ULOG_OUTPUT_TAG
+#define ULOG_BACKEND_USING_CONSOLE
 
 /* RT-Thread Utestcases */
 
@@ -183,6 +202,8 @@
 
 /* enhanced kernel services */
 
+#define PKG_USING_RT_VSNPRINTF_FULL
+#define PKG_USING_RT_VSNPRINTF_FULL_LATEST_VERSION
 
 /* acceleration: Assembly language or algorithmic acceleration packages */
 
@@ -195,6 +216,12 @@
 
 /* peripheral libraries and drivers */
 
+#define PKG_USING_SENSORS_DRIVERS
+#define PKG_USING_MPU6XXX
+#define PKG_USING_MPU6XXX_LATEST_VERSION
+#define PKG_USING_MPU6XXX_ACCE
+#define PKG_USING_MPU6XXX_GYRO
+#define PKG_USING_MPU6XXX_MAG
 
 /* Kendryte SDK */
 
@@ -224,17 +251,30 @@
 /* Onboard Peripheral Drivers */
 
 #define BSP_USING_SDCARD
+#define BSP_USING_PULSE_ENCODER
+#define BSP_USING_PULSE_ENCODER1
+#define BSP_USING_PULSE_ENCODER2
 
 /* On-chip Peripheral Drivers */
 
 #define BSP_USING_GPIO
 #define BSP_USING_SPI5
 #define BSP_USING_UART
-#define BSP_USING_UART2
+#define BSP_USING_UART6
 #define BSP_USING_SDIO
 #define BSP_USING_PWM
 #define BSP_USING_PWM12
 #define BSP_USING_PWM12_CH1
+#define BSP_USING_PWM4
+#define BSP_USING_PWM4_CH1
+#define BSP_USING_PWM4_CH2
+#define BSP_USING_PWM4_CH3
+#define BSP_USING_PWM4_CH4
+#define BSP_USING_PWM5
+#define BSP_USING_PWM5_CH1
+#define BSP_USING_PWM5_CH2
+#define BSP_USING_PWM5_CH3
+#define BSP_USING_PWM5_CH4
 
 /* Board extended module Drivers */
 

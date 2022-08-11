@@ -14,6 +14,25 @@ menu "Onboard Peripheral Drivers"
         select RT_USING_DFS
         select RT_USING_DFS_ELMFAT
         default n
+	menuconfig BSP_USING_PULSE_ENCODER
+        bool "Enable ENCODER"
+		default n
+        select RT_USING_PULSE_ENCODER
+        if BSP_USING_PULSE_ENCODER
+			config BSP_USING_PULSE_ENCODER1
+				bool "Enable pulse_encoder 1"
+                default n
+			config BSP_USING_PULSE_ENCODER2
+				bool "Enable pulse_encoder 2"
+                default n
+			config BSP_USING_PULSE_ENCODER3
+				bool "Enable pulse_encoder 3"
+                default n
+			config BSP_USING_PULSE_ENCODER4
+				bool "Enable pulse_encoder 4"
+                default n
+		endif
+		
 endmenu
 
 menu "On-chip Peripheral Drivers"

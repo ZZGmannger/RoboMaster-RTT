@@ -115,7 +115,7 @@ rt_err_t pulse_encoder_init(struct rt_pulse_encoder_device *pulse_encoder)
         return -RT_ERROR;
     }
     else
-    {
+    { 
         HAL_NVIC_SetPriority(stm32_device->encoder_irqn, 3, 0);
 
         /* enable the TIMx global Interrupt */
@@ -226,7 +226,7 @@ void pulse_encoder_update_isr(struct stm32_pulse_encoder_device *device)
 
 #ifdef BSP_USING_PULSE_ENCODER1
 #if defined(SOC_SERIES_STM32F4)
-void TIM1_UP_TIM10_IRQHandler(void)
+void TIM2_IRQHandler(void)
 #elif defined(SOC_SERIES_STM32F1)
 void TIM1_UP_IRQHandler(void)
 #else
@@ -241,7 +241,7 @@ void TIM1_UP_IRQHandler(void)
 }
 #endif
 #ifdef BSP_USING_PULSE_ENCODER2
-void TIM2_IRQHandler(void)
+void TIM8_UP_TIM13_IRQHandler(void)
 {
     /* enter interrupt */
     rt_interrupt_enter();
@@ -251,7 +251,7 @@ void TIM2_IRQHandler(void)
 }
 #endif
 #ifdef BSP_USING_PULSE_ENCODER3
-void TIM3_IRQHandler(void)
+void TIM4_IRQHandler(void)
 {
     /* enter interrupt */
     rt_interrupt_enter();
@@ -261,7 +261,7 @@ void TIM3_IRQHandler(void)
 }
 #endif
 #ifdef BSP_USING_PULSE_ENCODER4
-void TIM4_IRQHandler(void)
+void TIM5_IRQHandler(void)
 {
     /* enter interrupt */
     rt_interrupt_enter();
