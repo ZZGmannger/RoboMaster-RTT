@@ -58,7 +58,7 @@ int app_motor_init(void)
     rt_thread_startup(motor_speed_query_thread);
 	return 0;
 }
-INIT_APP_EXPORT(app_motor_init);
+//INIT_APP_EXPORT(app_motor_init);
 
 void motor_speed_query_entry(void* param)
 {

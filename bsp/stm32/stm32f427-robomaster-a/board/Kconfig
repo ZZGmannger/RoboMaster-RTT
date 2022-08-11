@@ -8,6 +8,13 @@ config SOC_STM32F427II
     default y
 
 menu "Onboard Peripheral Drivers"
+	
+	config BSP_USING_MCP4725
+		bool "Enable MCP4725"
+		select BSP_USING_I2C1
+		select BSP_USING_I2C2
+		default n
+
     config BSP_USING_SDCARD
         bool "Enable SDCARD (sdio)"
         select BSP_USING_SDIO
@@ -45,6 +52,42 @@ menu "On-chip Peripheral Drivers"
 	config BSP_USING_SPI5
 		bool "Enable SPI5"
 		default n
+
+     menuconfig BSP_USING_I2C1
+        bool "Enable I2C1 BUS (software simulation)"
+        default n
+        select RT_USING_I2C
+        select RT_USING_I2C_BITOPS
+        select RT_USING_PIN
+        if BSP_USING_I2C1
+            comment "Notice: PA2 --> 2; PA3 --> 3" 
+            config BSP_I2C1_SCL_PIN
+                int "I2C1 scl pin number"
+                range 1 144
+                default 2
+            config BSP_I2C1_SDA_PIN
+                int "I2C1 sda pin number"
+                range 1 144
+                default 3
+        endif
+	
+	menuconfig BSP_USING_I2C2
+        bool "Enable I2C2 BUS (software simulation)"
+        default n
+        select RT_USING_I2C
+        select RT_USING_I2C_BITOPS
+        select RT_USING_PIN
+        if BSP_USING_I2C2
+            comment "Notice: PI7-->135 ; PI2--->130" 
+            config BSP_I2C2_SCL_PIN
+                int "I2C2 scl pin number"
+                range 1 144
+                default 135
+            config BSP_I2C2_SDA_PIN
+                int "I2C2 sda pin number"
+                range 1 144
+                default 130
+        endif
 
     menuconfig BSP_USING_UART
         bool "Enable UART"

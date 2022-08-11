@@ -99,6 +99,8 @@
 #define RT_USING_SERIAL
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_PWM
 #define RT_USING_SDIO
@@ -250,6 +252,7 @@
 
 /* Onboard Peripheral Drivers */
 
+#define BSP_USING_MCP4725
 #define BSP_USING_SDCARD
 #define BSP_USING_PULSE_ENCODER
 #define BSP_USING_PULSE_ENCODER1
@@ -259,6 +262,18 @@
 
 #define BSP_USING_GPIO
 #define BSP_USING_SPI5
+#define BSP_USING_I2C1
+
+/* Notice: PA2 --> 2; PA3 --> 3 */
+
+#define BSP_I2C1_SCL_PIN 2
+#define BSP_I2C1_SDA_PIN 3
+#define BSP_USING_I2C2
+
+/* Notice: PI7-->135 ; PI2--->130 */
+
+#define BSP_I2C2_SCL_PIN 135
+#define BSP_I2C2_SDA_PIN 130
 #define BSP_USING_UART
 #define BSP_USING_UART6
 #define BSP_USING_SDIO

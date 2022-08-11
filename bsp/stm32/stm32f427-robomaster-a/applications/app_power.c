@@ -36,6 +36,11 @@ int app_power_init(void)
 
 void app_power_entry(void* param)
 {
+	int pa2 =GET_PIN(A,2);
+	int pa3 =GET_PIN(A,3);
+	int pi7 =GET_PIN(I,7);
+	int pi2 =GET_PIN(I,2);
+	LOG_W("pa2:%d , pa3:%d , pi7:%d , pi2:%d" ,pa2,pa3,pi7,pi2);
     while(1)
     {
 //        rt_pin_write(POWER24_1_PIN, PIN_HIGH);
@@ -47,7 +52,7 @@ void app_power_entry(void* param)
 //        rt_pin_write(POWER24_2_PIN, PIN_LOW);
 //        rt_pin_write(POWER24_3_PIN, PIN_LOW);
 //        rt_pin_write(POWER24_4_PIN, PIN_LOW);
-//        rt_thread_mdelay(1000);
+        rt_thread_mdelay(1000);
     }
 }
 
