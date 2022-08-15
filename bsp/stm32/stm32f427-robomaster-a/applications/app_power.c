@@ -32,7 +32,7 @@ int app_power_init(void)
     rt_thread_startup(app_power_thread);
 	return 0;
 }
-//INIT_APP_EXPORT(app_power_init);
+INIT_APP_EXPORT(app_power_init);
 
 void app_power_entry(void* param)
 {
@@ -41,6 +41,10 @@ void app_power_entry(void* param)
 	int pi7 =GET_PIN(I,7);
 	int pi2 =GET_PIN(I,2);
 	LOG_W("pa2:%d , pa3:%d , pi7:%d , pi2:%d" ,pa2,pa3,pi7,pi2);
+        rt_pin_write(POWER24_1_PIN, PIN_HIGH);
+        rt_pin_write(POWER24_2_PIN, PIN_HIGH);
+        rt_pin_write(POWER24_3_PIN, PIN_HIGH);
+        rt_pin_write(POWER24_4_PIN, PIN_HIGH);
     while(1)
     {
 //        rt_pin_write(POWER24_1_PIN, PIN_HIGH);
